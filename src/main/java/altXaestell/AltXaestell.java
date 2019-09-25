@@ -173,13 +173,15 @@ public class AltXaestell extends ListenerAdapter {
         else if (message.equalsIgnoreCase("!help"))  {
             String resultMessage = "";
             resultMessage += "*You can use these commands to interact with the bot:* \n";
-            resultMessage += "```\n";
+            resultMessage += "```sql\n";
             resultMessage += "!set users: to set a list of users the bot messages to\n";
-            resultMessage += "!view users: to view the list of users\n";
             resultMessage += "!set channel: to set a channel the bot invites users to\n";
+            resultMessage += "!set admin: to set an admin user to forward progress reports to\n\n";
+
+            resultMessage += "!view users: to view the list of users\n";
             resultMessage += "!view channel: to view the channel\n";
-            resultMessage += "!set admin: to set an admin user to forward progress reports to\n";
-            resultMessage += "!view admin: to view the admin user\n";
+            resultMessage += "!view admin: to view the admin user\n\n";
+
             resultMessage += "!start: to send messages to all users in the list\n";
             resultMessage += "```";
 
