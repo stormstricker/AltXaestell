@@ -1,12 +1,12 @@
 package altXaestell;
 
+import Utils.BotUtils;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.requests.RestAction;
 import net.dv8tion.jda.api.requests.restaction.InviteAction;
 
 import java.io.BufferedReader;
@@ -36,13 +36,7 @@ public class AltXaestell extends ListenerAdapter {
     }
 
     public static void main(String[] args) throws Exception  {
-        System.out.println("Inside CodeBuster's main");
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(
-                    AltXaestell.class.getResourceAsStream("/tokens/AltXaestell.token")));
-        String token = br.readLine();
-        br.close();
-
+        String token = BotUtils.getFirstLineFromFile("AltXaestell.token");
         System.out.println("token: " + token);
 
         AltXaestell altXaestell = new AltXaestell();
